@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="util.math.unittests.GreatestCommonDivisorTest" time="0.468" tests="24" errors="2" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="19"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/usuaro/UNRC/AlgoritmosII/exercise-set-1-delfib/GreatestCommonDivisor/target/test-classes:/home/usuaro/UNRC/AlgoritmosII/exercise-set-1-delfib/GreatestCommonDivisor/target/classes:/home/usuaro/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar:/home/usuaro/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/usuaro/.m2/repository/org/openjdk/jmh/jmh-core/1.23/jmh-core-1.23.jar:/home/usuaro/.m2/repository/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar:/home/usuaro/.m2/repository/org/apache/commons/commons-math3/3.2/commons-math3-3.2.jar:/home/usuaro/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.23/jmh-generator-annprocess-1.23.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="19"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="AR"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/jdk-19/lib"/>
+    <property name="sun.java.command" value="/home/usuaro/UNRC/AlgoritmosII/exercise-set-1-delfib/GreatestCommonDivisor/target/surefire/surefirebooter-20230320155641345_3.jar /home/usuaro/UNRC/AlgoritmosII/exercise-set-1-delfib/GreatestCommonDivisor/target/surefire 2023-03-20T15-56-41_001-jvmRun1 surefire-20230320155641345_1tmp surefire_0-20230320155641345_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/usuaro/UNRC/AlgoritmosII/exercise-set-1-delfib/GreatestCommonDivisor/target/test-classes:/home/usuaro/UNRC/AlgoritmosII/exercise-set-1-delfib/GreatestCommonDivisor/target/classes:/home/usuaro/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar:/home/usuaro/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/usuaro/.m2/repository/org/openjdk/jmh/jmh-core/1.23/jmh-core-1.23.jar:/home/usuaro/.m2/repository/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar:/home/usuaro/.m2/repository/org/apache/commons/commons-math3/3.2/commons-math3-3.2.jar:/home/usuaro/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.23/jmh-generator-annprocess-1.23.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/usuaro"/>
+    <property name="user.language" value="es"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-01-17"/>
+    <property name="java.home" value="/usr/lib/jvm/jdk-19"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/usuaro/UNRC/AlgoritmosII/exercise-set-1-delfib/GreatestCommonDivisor"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/home/usuaro/UNRC/AlgoritmosII/exercise-set-1-delfib/GreatestCommonDivisor/target/surefire/surefirebooter-20230320155641345_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="19.0.2+7-44"/>
+    <property name="user.name" value="usuaro"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.19.0-35-generic"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/usuaro/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="19.0.2"/>
+    <property name="user.dir" value="/home/usuaro/UNRC/AlgoritmosII/exercise-set-1-delfib/GreatestCommonDivisor"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="19.0.2+7-44"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="63.0"/>
+  </properties>
+  <testcase name="testIllegalArgumentException[0]" classname="util.math.unittests.GreatestCommonDivisorTest" time="0.013"/>
+  <testcase name="test[0]" classname="util.math.unittests.GreatestCommonDivisorTest" time="0"/>
+  <testcase name="testIllegalArgumentException2[0]" classname="util.math.unittests.GreatestCommonDivisorTest" time="0"/>
+  <testcase name="testIllegalArgumentException[1]" classname="util.math.unittests.GreatestCommonDivisorTest" time="0.001"/>
+  <testcase name="test[1]" classname="util.math.unittests.GreatestCommonDivisorTest" time="0"/>
+  <testcase name="testIllegalArgumentException2[1]" classname="util.math.unittests.GreatestCommonDivisorTest" time="0"/>
+  <testcase name="testIllegalArgumentException[2]" classname="util.math.unittests.GreatestCommonDivisorTest" time="0.001"/>
+  <testcase name="test[2]" classname="util.math.unittests.GreatestCommonDivisorTest" time="0"/>
+  <testcase name="testIllegalArgumentException2[2]" classname="util.math.unittests.GreatestCommonDivisorTest" time="0.001"/>
+  <testcase name="testIllegalArgumentException[3]" classname="util.math.unittests.GreatestCommonDivisorTest" time="0"/>
+  <testcase name="test[3]" classname="util.math.unittests.GreatestCommonDivisorTest" time="0"/>
+  <testcase name="testIllegalArgumentException2[3]" classname="util.math.unittests.GreatestCommonDivisorTest" time="0.001"/>
+  <testcase name="testIllegalArgumentException[4]" classname="util.math.unittests.GreatestCommonDivisorTest" time="0.001"/>
+  <testcase name="test[4]" classname="util.math.unittests.GreatestCommonDivisorTest" time="0.008">
+    <error message="/ by zero" type="java.lang.ArithmeticException"><![CDATA[java.lang.ArithmeticException: / by zero
+	at util.math.GreatestCommonDivisor.definitionBasedAlgorithm(GreatestCommonDivisor.java:40)
+	at util.math.unittests.GreatestCommonDivisorTest.test(GreatestCommonDivisorTest.java:71)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:377)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:284)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:248)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:167)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+]]></error>
+  </testcase>
+  <testcase name="testIllegalArgumentException2[4]" classname="util.math.unittests.GreatestCommonDivisorTest" time="0.001"/>
+  <testcase name="testIllegalArgumentException[5]" classname="util.math.unittests.GreatestCommonDivisorTest" time="0"/>
+  <testcase name="test[5]" classname="util.math.unittests.GreatestCommonDivisorTest" time="0.001">
+    <error message="/ by zero" type="java.lang.ArithmeticException"><![CDATA[java.lang.ArithmeticException: / by zero
+	at util.math.GreatestCommonDivisor.definitionBasedAlgorithm(GreatestCommonDivisor.java:40)
+	at util.math.unittests.GreatestCommonDivisorTest.test(GreatestCommonDivisorTest.java:71)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:377)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:284)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:248)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:167)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+]]></error>
+  </testcase>
+  <testcase name="testIllegalArgumentException2[5]" classname="util.math.unittests.GreatestCommonDivisorTest" time="0.001"/>
+  <testcase name="testIllegalArgumentException[6]" classname="util.math.unittests.GreatestCommonDivisorTest" time="0"/>
+  <testcase name="test[6]" classname="util.math.unittests.GreatestCommonDivisorTest" time="0"/>
+  <testcase name="testIllegalArgumentException2[6]" classname="util.math.unittests.GreatestCommonDivisorTest" time="0"/>
+  <testcase name="testIllegalArgumentException[7]" classname="util.math.unittests.GreatestCommonDivisorTest" time="0"/>
+  <testcase name="test[7]" classname="util.math.unittests.GreatestCommonDivisorTest" time="0.327"/>
+  <testcase name="testIllegalArgumentException2[7]" classname="util.math.unittests.GreatestCommonDivisorTest" time="0.001"/>
+</testsuite>

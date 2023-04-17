@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="util.unittest.InsertionSortLargeArraysTest" time="4.779" tests="200" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="19"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/usuaro/UNRC/AlgoritmosII/exercise-set-1-delfib/ArraySorter/target/test-classes:/home/usuaro/UNRC/AlgoritmosII/exercise-set-1-delfib/ArraySorter/target/classes:/home/usuaro/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar:/home/usuaro/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/usuaro/.m2/repository/org/openjdk/jmh/jmh-core/1.23/jmh-core-1.23.jar:/home/usuaro/.m2/repository/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar:/home/usuaro/.m2/repository/org/apache/commons/commons-math3/3.2/commons-math3-3.2.jar:/home/usuaro/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.23/jmh-generator-annprocess-1.23.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="19"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="AR"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/jdk-19/lib"/>
+    <property name="sun.java.command" value="/home/usuaro/UNRC/AlgoritmosII/exercise-set-1-delfib/ArraySorter/target/surefire/surefirebooter-20230320143414192_3.jar /home/usuaro/UNRC/AlgoritmosII/exercise-set-1-delfib/ArraySorter/target/surefire 2023-03-20T14-34-13_878-jvmRun1 surefire-20230320143414192_1tmp surefire_0-20230320143414192_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/usuaro/UNRC/AlgoritmosII/exercise-set-1-delfib/ArraySorter/target/test-classes:/home/usuaro/UNRC/AlgoritmosII/exercise-set-1-delfib/ArraySorter/target/classes:/home/usuaro/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar:/home/usuaro/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/usuaro/.m2/repository/org/openjdk/jmh/jmh-core/1.23/jmh-core-1.23.jar:/home/usuaro/.m2/repository/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar:/home/usuaro/.m2/repository/org/apache/commons/commons-math3/3.2/commons-math3-3.2.jar:/home/usuaro/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.23/jmh-generator-annprocess-1.23.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/usuaro"/>
+    <property name="user.language" value="es"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-01-17"/>
+    <property name="java.home" value="/usr/lib/jvm/jdk-19"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/usuaro/UNRC/AlgoritmosII/exercise-set-1-delfib/ArraySorter"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/home/usuaro/UNRC/AlgoritmosII/exercise-set-1-delfib/ArraySorter/target/surefire/surefirebooter-20230320143414192_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="19.0.2+7-44"/>
+    <property name="user.name" value="usuaro"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.19.0-35-generic"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/usuaro/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="19.0.2"/>
+    <property name="user.dir" value="/home/usuaro/UNRC/AlgoritmosII/exercise-set-1-delfib/ArraySorter"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="19.0.2+7-44"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="63.0"/>
+  </properties>
+  <testcase name="insertionSortLeavesArraySorted[0]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortSortsCorrectly[0]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[1]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortSortsCorrectly[1]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[2]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortSortsCorrectly[2]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[3]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.003"/>
+  <testcase name="insertionSortSortsCorrectly[3]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[4]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.004"/>
+  <testcase name="insertionSortSortsCorrectly[4]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[5]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.004"/>
+  <testcase name="insertionSortSortsCorrectly[5]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[6]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.004"/>
+  <testcase name="insertionSortSortsCorrectly[6]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[7]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.004"/>
+  <testcase name="insertionSortSortsCorrectly[7]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[8]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.005"/>
+  <testcase name="insertionSortSortsCorrectly[8]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[9]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.007"/>
+  <testcase name="insertionSortSortsCorrectly[9]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[10]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.019"/>
+  <testcase name="insertionSortSortsCorrectly[10]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[11]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.025"/>
+  <testcase name="insertionSortSortsCorrectly[11]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[12]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.032"/>
+  <testcase name="insertionSortSortsCorrectly[12]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[13]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.005"/>
+  <testcase name="insertionSortSortsCorrectly[13]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[14]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.004"/>
+  <testcase name="insertionSortSortsCorrectly[14]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[15]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.007"/>
+  <testcase name="insertionSortSortsCorrectly[15]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[16]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.006"/>
+  <testcase name="insertionSortSortsCorrectly[16]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[17]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.007"/>
+  <testcase name="insertionSortSortsCorrectly[17]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[18]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.007"/>
+  <testcase name="insertionSortSortsCorrectly[18]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[19]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.008"/>
+  <testcase name="insertionSortSortsCorrectly[19]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[20]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.008"/>
+  <testcase name="insertionSortSortsCorrectly[20]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[21]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.009"/>
+  <testcase name="insertionSortSortsCorrectly[21]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[22]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.009"/>
+  <testcase name="insertionSortSortsCorrectly[22]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[23]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.012"/>
+  <testcase name="insertionSortSortsCorrectly[23]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[24]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.012"/>
+  <testcase name="insertionSortSortsCorrectly[24]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[25]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.022"/>
+  <testcase name="insertionSortSortsCorrectly[25]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[26]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.02"/>
+  <testcase name="insertionSortSortsCorrectly[26]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[27]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.017"/>
+  <testcase name="insertionSortSortsCorrectly[27]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[28]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.018"/>
+  <testcase name="insertionSortSortsCorrectly[28]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[29]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.019"/>
+  <testcase name="insertionSortSortsCorrectly[29]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[30]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.019"/>
+  <testcase name="insertionSortSortsCorrectly[30]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[31]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.02"/>
+  <testcase name="insertionSortSortsCorrectly[31]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[32]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.021"/>
+  <testcase name="insertionSortSortsCorrectly[32]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[33]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.022"/>
+  <testcase name="insertionSortSortsCorrectly[33]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[34]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.027"/>
+  <testcase name="insertionSortSortsCorrectly[34]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[35]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.027"/>
+  <testcase name="insertionSortSortsCorrectly[35]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[36]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.027"/>
+  <testcase name="insertionSortSortsCorrectly[36]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[37]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.029"/>
+  <testcase name="insertionSortSortsCorrectly[37]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[38]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.03"/>
+  <testcase name="insertionSortSortsCorrectly[38]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[39]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.031"/>
+  <testcase name="insertionSortSortsCorrectly[39]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[40]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.034"/>
+  <testcase name="insertionSortSortsCorrectly[40]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[41]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.034"/>
+  <testcase name="insertionSortSortsCorrectly[41]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[42]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.034"/>
+  <testcase name="insertionSortSortsCorrectly[42]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[43]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.035"/>
+  <testcase name="insertionSortSortsCorrectly[43]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[44]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.035"/>
+  <testcase name="insertionSortSortsCorrectly[44]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[45]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.037"/>
+  <testcase name="insertionSortSortsCorrectly[45]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[46]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.038"/>
+  <testcase name="insertionSortSortsCorrectly[46]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[47]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.04"/>
+  <testcase name="insertionSortSortsCorrectly[47]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[48]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.042"/>
+  <testcase name="insertionSortSortsCorrectly[48]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[49]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.043"/>
+  <testcase name="insertionSortSortsCorrectly[49]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[50]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.046"/>
+  <testcase name="insertionSortSortsCorrectly[50]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[51]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.05"/>
+  <testcase name="insertionSortSortsCorrectly[51]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[52]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.049"/>
+  <testcase name="insertionSortSortsCorrectly[52]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[53]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.054"/>
+  <testcase name="insertionSortSortsCorrectly[53]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[54]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.055"/>
+  <testcase name="insertionSortSortsCorrectly[54]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[55]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.058"/>
+  <testcase name="insertionSortSortsCorrectly[55]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[56]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.054"/>
+  <testcase name="insertionSortSortsCorrectly[56]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[57]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.057"/>
+  <testcase name="insertionSortSortsCorrectly[57]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[58]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.056"/>
+  <testcase name="insertionSortSortsCorrectly[58]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[59]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.08"/>
+  <testcase name="insertionSortSortsCorrectly[59]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[60]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.059"/>
+  <testcase name="insertionSortSortsCorrectly[60]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[61]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.044"/>
+  <testcase name="insertionSortSortsCorrectly[61]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[62]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.034"/>
+  <testcase name="insertionSortSortsCorrectly[62]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[63]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.034"/>
+  <testcase name="insertionSortSortsCorrectly[63]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[64]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.042"/>
+  <testcase name="insertionSortSortsCorrectly[64]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[65]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.063"/>
+  <testcase name="insertionSortSortsCorrectly[65]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[66]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.049"/>
+  <testcase name="insertionSortSortsCorrectly[66]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[67]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.053"/>
+  <testcase name="insertionSortSortsCorrectly[67]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[68]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.052"/>
+  <testcase name="insertionSortSortsCorrectly[68]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[69]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.058"/>
+  <testcase name="insertionSortSortsCorrectly[69]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[70]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.066"/>
+  <testcase name="insertionSortSortsCorrectly[70]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[71]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.06"/>
+  <testcase name="insertionSortSortsCorrectly[71]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[72]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.062"/>
+  <testcase name="insertionSortSortsCorrectly[72]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[73]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.068"/>
+  <testcase name="insertionSortSortsCorrectly[73]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[74]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.065"/>
+  <testcase name="insertionSortSortsCorrectly[74]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[75]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.084"/>
+  <testcase name="insertionSortSortsCorrectly[75]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[76]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.069"/>
+  <testcase name="insertionSortSortsCorrectly[76]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[77]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.07"/>
+  <testcase name="insertionSortSortsCorrectly[77]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[78]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.057"/>
+  <testcase name="insertionSortSortsCorrectly[78]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[79]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.051"/>
+  <testcase name="insertionSortSortsCorrectly[79]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[80]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.053"/>
+  <testcase name="insertionSortSortsCorrectly[80]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[81]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.063"/>
+  <testcase name="insertionSortSortsCorrectly[81]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[82]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.084"/>
+  <testcase name="insertionSortSortsCorrectly[82]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[83]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.086"/>
+  <testcase name="insertionSortSortsCorrectly[83]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[84]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.087"/>
+  <testcase name="insertionSortSortsCorrectly[84]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[85]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.085"/>
+  <testcase name="insertionSortSortsCorrectly[85]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[86]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.084"/>
+  <testcase name="insertionSortSortsCorrectly[86]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[87]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.1"/>
+  <testcase name="insertionSortSortsCorrectly[87]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[88]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.12"/>
+  <testcase name="insertionSortSortsCorrectly[88]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[89]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.116"/>
+  <testcase name="insertionSortSortsCorrectly[89]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[90]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.117"/>
+  <testcase name="insertionSortSortsCorrectly[90]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[91]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.118"/>
+  <testcase name="insertionSortSortsCorrectly[91]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[92]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.121"/>
+  <testcase name="insertionSortSortsCorrectly[92]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[93]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.127"/>
+  <testcase name="insertionSortSortsCorrectly[93]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[94]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.129"/>
+  <testcase name="insertionSortSortsCorrectly[94]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[95]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.128"/>
+  <testcase name="insertionSortSortsCorrectly[95]" classname="util.unittest.InsertionSortLargeArraysTest" time="0"/>
+  <testcase name="insertionSortLeavesArraySorted[96]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.106"/>
+  <testcase name="insertionSortSortsCorrectly[96]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[97]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.103"/>
+  <testcase name="insertionSortSortsCorrectly[97]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[98]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.11"/>
+  <testcase name="insertionSortSortsCorrectly[98]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+  <testcase name="insertionSortLeavesArraySorted[99]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.145"/>
+  <testcase name="insertionSortSortsCorrectly[99]" classname="util.unittest.InsertionSortLargeArraysTest" time="0.001"/>
+</testsuite>
