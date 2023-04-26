@@ -3,50 +3,15 @@ import java.util.List;
 
 public class GraphColoring {
     public static void main (String[] args){
-        int[][] graph = new int[8][8];
+        int[][] graph = {
+            {0, 1, 1, 1, 1},
+            {1, 0, 1, 0, 0},
+            {1, 1, 0, 1, 0},
+            {1, 0, 1, 0, 1},
+            {1, 0, 0, 1, 0}
+        };  
 
-        /*graph[0][0] = 0;
-        graph[0][1] = 1;
-        graph[0][2] = 0;
-        graph[1][0] = 1;
-        graph[1][1] = 0;
-        graph[1][2] = 1;
-        graph[2][0] = 0;
-        graph[2][1] = 1;
-        graph[2][2] = 0;*/
-
-        graph[0][1] = 1;
-        graph[0][2] = 1;
-        graph[0][3] = 1;
-        graph[0][4] = 1;
-        graph[1][0] = 1;
-        graph[1][3] = 1;
-        
-        graph[2][0] = 1;
-        graph[2][3] = 1;
-
-        graph[3][0] = 1;
-        graph[3][1] = 1;
-        graph[3][2] = 1;
-        graph[3][7] = 1;
-
-        graph[4][0] = 1;
-        graph[4][5] = 1;
-        graph[4][6] = 1;
-
-        graph[5][4] = 1;
-        graph[5][6] = 1;
-        graph[5][7] = 1;
-
-        graph[6][4] = 1;
-        graph[6][5] = 1;
-        graph[6][7] = 1;
-
-        graph[7][3] = 1;
-        graph[7][6] = 1;
-        graph[7][5] = 1;
-
-        Integer[] result = new Integer[8];
+        Integer[] result = new Integer[5];
         result = graphColoring(graph);
 
         for (int i = 0; i < result.length; i++){
