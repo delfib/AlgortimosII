@@ -6,7 +6,6 @@ package conventionalsearch;
  * states, needed when characterising problems as search problems. 
  * State definitions for particular search problems should extend this class,
  * so the general search strategies can be used.
- * @author Nazareno Aguirre
  */
 
 public interface State {
@@ -17,9 +16,6 @@ public interface State {
    */
   State getParent();
   
- 
-  
-  
   /** 
    * Indicates whether this state is a successful state, in the context of
    * the current problem. Concrete implementations of State 
@@ -28,7 +24,6 @@ public interface State {
    * @return true iff s is a successful state.
    */
   boolean isSuccess();
-
   
   /** 
    * Checks whether 'this' is equal to another state. This must be implemented
@@ -55,7 +50,4 @@ public interface State {
    */
   @Override
   String toString();
-  
-
-
 }
