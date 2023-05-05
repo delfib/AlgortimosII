@@ -68,7 +68,7 @@ public class BreadthFirstEngine<S extends State, P extends StateProblem<S>> impl
             }
         }
         return goal;
-  }
+    }
   
     /** 
     * Returns the path to a previously calculated successful state for problem.

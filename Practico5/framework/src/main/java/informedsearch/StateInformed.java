@@ -9,8 +9,6 @@ import conventionalsearch.State;
  * implement this interface, to be able to use the search strategies.
  */
 
-
-
 public interface StateInformed extends State {
     /** 
      * Computes the value of this state. If the state is a leaf (end state), then this value is an exact value.
