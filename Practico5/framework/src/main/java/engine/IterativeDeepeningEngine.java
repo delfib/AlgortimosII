@@ -5,7 +5,7 @@ import conventionalsearch.Engine;
 import conventionalsearch.State;
 import conventionalsearch.StateProblem;
 
-
+// TODO: hay algo mal en la implementacion porque me deberia devolver el menor camino siempre y no lo esta haciendo
 public class IterativeDeepeningEngine <S extends State, P extends StateProblem<S>> implements Engine<S,P> {
     
     private P sp; // Internal representation of the StateProblem.
@@ -18,6 +18,16 @@ public class IterativeDeepeningEngine <S extends State, P extends StateProblem<S
             goal = dfsAcotadoPor(depth);
             depth++;
         }
+
+        // Let's create the path of this successful state
+        if (goal != null){
+            S s = goal;
+            while (s != null){
+                path.add(0,s);  // agrega siempre a la cabeza
+                s = (S) s.getParent();
+            }
+        }
+
         return goal;
     }
 
@@ -31,14 +41,6 @@ public class IterativeDeepeningEngine <S extends State, P extends StateProblem<S
 
         S goal = dfsAcotadoPor(depth, sp.initialState());
         
-        // Let's create the path of this successful state
-        if (goal != null){
-            S s = goal;
-            while (s != null){
-                path.add(0,s);  // agrega siempre a la cabeza
-                s = (S) s.getParent();
-            }
-        }
         return goal;
     }
 
