@@ -3,6 +3,7 @@ package examples.jugs;
 import engine.BestFirstEngine;
 import engine.BreadthFirstEngine;
 import engine.DepthFirstEngine;
+import engine.HillClimbingEngine;
 
 import java.util.List;
 
@@ -100,8 +101,8 @@ public class JugsSearchApp {
         JugsStateProblemInformed sp2 = new JugsStateProblemInformed(0,0);
 
 
-        BestFirstEngine<JugsStateInformed,JugsStateProblemInformed> eningBestFS = new BestFirstEngine<JugsStateInformed,JugsStateProblemInformed>(sp2);
-        JugsStateInformed successBestFS = eningBestFS.performSearch();
+        BestFirstEngine<JugsStateInformed,JugsStateProblemInformed> engineBestFS = new BestFirstEngine<JugsStateInformed,JugsStateProblemInformed>(sp2);
+        JugsStateInformed successBestFS = engineBestFS.performSearch();
 
         System.out.println();     
         System.out.println("--------- Result using Best-first search ---------");
@@ -109,13 +110,65 @@ public class JugsSearchApp {
             
         if (! (successBestFS == null)) {
             System.out.print("Path to goal: ");
-            List<JugsStateInformed> pathBestFS = eningBestFS.getPath();
+            List<JugsStateInformed> pathBestFS = engineBestFS.getPath();
             for (int i = 0; i < pathBestFS.size(); i++) {
                 JugsStateInformed current = (JugsStateInformed) pathBestFS.get(i);
                 System.out.print(current.toString());
             }
             System.out.println();
         }
-        eningBestFS.report();
+        engineBestFS.report();
+
+
+        /*
+        * App using Hill Climbing search
+        */ 
+        HillClimbingEngine<JugsStateInformed,JugsStateProblemInformed> engineHillClimbing = new HillClimbingEngine<JugsStateInformed,JugsStateProblemInformed>(sp2);
+        JugsStateInformed succesHillClimbing = engineHillClimbing.performSearch();
+
+        System.out.println();     
+        System.out.println("--------- Result using Hill Climbing Search ---------");
+        if (succesHillClimbing != null){
+            System.out.println("Solution found? " + succesHillClimbing.toString());
+        } else {
+            System.out.println("There was no successful state found with this technique");
+        }
+            
+        if (! (succesHillClimbing == null)) {
+            System.out.print("Path to goal: ");
+            List<JugsStateInformed> pathHillClimbing = engineHillClimbing.getPath();
+            for (int i = 0; i < pathHillClimbing.size(); i++) {
+                JugsStateInformed current = (JugsStateInformed) pathHillClimbing.get(i);
+                System.out.print(current.toString());
+            }
+            System.out.println();
+        }
+        engineHillClimbing.report();
+
+
+        /*
+        * App using Steepest Hill Climbing search
+        */ 
+        HillClimbingEngine<JugsStateInformed,JugsStateProblemInformed> engineSteepest = new HillClimbingEngine<JugsStateInformed,JugsStateProblemInformed>(sp2);
+        JugsStateInformed successSteepest = engineSteepest.performSearch();
+
+        System.out.println();     
+        System.out.println("--------- Result using Steepest Hill Climbing Search ---------");
+        if (successSteepest != null){
+            System.out.println("Solution found? " + successSteepest.toString());
+        } else {
+            System.out.println("There was no successful state found with this technique");
+        }
+            
+        if (! (successSteepest == null)) {
+            System.out.print("Path to goal: ");
+            List<JugsStateInformed> pathSteepest = engineSteepest.getPath();
+            for (int i = 0; i < pathSteepest.size(); i++) {
+                JugsStateInformed current = (JugsStateInformed) pathSteepest.get(i);
+                System.out.print(current.toString());
+            }
+            System.out.println();
+        }
+        engineSteepest.report();
     } 
 }

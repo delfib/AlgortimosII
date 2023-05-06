@@ -50,8 +50,7 @@ public class BestFirstEngine <S extends StateInformed, P extends StateProblem<S>
             if (current.isSuccess()){
                 found = true;
                 goal = current;
-            }
-            else {
+            } else {
                 List<S> succs = sp.getSuccessors(current);
                 for (S s: succs) {
                     if (!visitedStates.contains(s)){

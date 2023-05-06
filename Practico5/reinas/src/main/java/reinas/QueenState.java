@@ -3,6 +3,7 @@ package reinas;
 import conventionalsearch.State;
 
 /**
+ * 8 Queens problem implementation
  */
 public class QueenState implements State {
     // array to store the positions of the queens in the board. 
