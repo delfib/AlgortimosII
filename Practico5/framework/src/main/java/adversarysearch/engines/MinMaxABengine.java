@@ -39,42 +39,56 @@ public class MinMaxABengine <P extends StateProblemAdversary<S>, S extends State
      */
     @Override
     public int computeValue(S state) {
-        return computeValue(state, 0, Integer.MIN_VALUE, Integer.MAX_VALUE);
+        return state.value();
     }
-
-    // TODO: no esta bien manejado el depth ahi
-    private int computeValue(S state, int depth, int alfa, int beta){
-        if (state.end() || depth >= maxDepth){
-            return state.value();
+    
+    // TODO: controlar la depth
+    private int minMaxAB(S state, int depth, int alfa, int beta){
+        if (state.end() && depth == 0){
+            return computeValue(state);
         }
         List<S> succs = sp.getSuccessors(state);
         for (int i = 0; i < succs.size() && alfa < beta; i++){
             if (state.isMax()){
-                alfa = Math.max(alfa, computeValue(succs.get(i), depth + 1, alfa, beta));
+                alfa = Math.max(alfa, minMaxAB(succs.get(i), depth - 1, alfa, beta));
             }
             else {
-                beta = Math.min(beta, computeValue(succs.get(i), depth + 1, alfa, beta));
+                beta = Math.min(beta, minMaxAB(succs.get(i), depth - 1, alfa, beta));
             }
         }
         if (state.isMax()){
             return alfa;
-        }
+        } 
         else {
             return beta;
         }
     }
 
-    @Override
     public S computeSuccessor(S state) {
         S bestSuccessor = null;
-        int maxValue = Integer.MIN_VALUE;
-        List<S> succs = sp.getSuccessors(state);
-        for (S successor : succs){
-            if (maxValue < successor.value()){
-                maxValue = successor.value();
-                bestSuccessor = successor;
+        if (state.isMax()){
+            int bestValue = Integer.MIN_VALUE;
+            List<S> succs = sp.getSuccessors(state);
+            for (S successor : succs){
+                int value = minMaxAB(successor, maxDepth - 1, Integer.MIN_VALUE, Integer.MAX_VALUE);
+                if (value > bestValue){
+                    bestValue = value;
+                    bestSuccessor = successor;
+                }
             }
         }
+        else {
+            int bestValue = Integer.MAX_VALUE;
+            List<S> succs = sp.getSuccessors(state);
+            for (S successor : succs){
+                int value = minMaxAB(successor, maxDepth - 1, Integer.MIN_VALUE, Integer.MAX_VALUE);
+                if (value < bestValue){
+                    bestValue = value;
+                    bestSuccessor = successor;
+                }
+            }
+        }
+
         return bestSuccessor;
     }
 

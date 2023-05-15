@@ -33,9 +33,7 @@ public interface StateProblemAdversary<S extends StateAdversary> {
    * @pre. state!=null.
    * @post. the list of successor states of state is returned.  
    */
-    List<S> getSuccessors(S s);
-
-  
+    List<S> getSuccessors(S s);  
   
   /** 
    * Indicates the least possible value for a state in the problem.

@@ -5,16 +5,26 @@ import java.util.List;
 import adversarysearch.StateAdversary;
 import adversarysearch.StateProblemAdversary;
 
-public class TicTacToeProblem <S extends StateAdversary> implements StateProblemAdversary <S> {
+public class TicTacToeProblem implements StateProblemAdversary <TicTacToeState> {
+    private TicTacToeState initial; // the initial state, the starting point of the Adversary Search
 
-    @Override
-    public S initialState() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'initialState'");
+    // Constructor
+    public TicTacToeProblem(){
+        initial = null;
+    }
+
+    // Another Constructor
+    public TicTacToeProblem(boolean player){
+        initial = new TicTacToeState(player);
     }
 
     @Override
-    public List<S> getSuccessors(S s) {
+    public TicTacToeState initialState() {
+        return initial;
+    }
+
+    @Override
+    public List<TicTacToeState> getSuccessors(TicTacToeState s) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getSuccessors'");
     }
@@ -30,5 +40,5 @@ public class TicTacToeProblem <S extends StateAdversary> implements StateProblem
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'maxValue'");
     }
-    
+   
 }

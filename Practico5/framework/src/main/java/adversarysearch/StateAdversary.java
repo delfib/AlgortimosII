@@ -21,7 +21,6 @@ public interface StateAdversary extends State {
    */
     boolean isMax();
    
-   
 
   /** 
    * Indicates whether this state is an end state, i.e., a 
