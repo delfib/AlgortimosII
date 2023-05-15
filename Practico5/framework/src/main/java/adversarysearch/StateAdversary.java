@@ -8,7 +8,6 @@ import conventionalsearch.State;
  * definitions for particular adversary search problems should 
  * implement this interface, so that general adversary search 
  * strategies can be used.
- * @author Nazareno Aguirre
  */
 
 public interface StateAdversary extends State {
@@ -20,7 +19,7 @@ public interface StateAdversary extends State {
    * @pre. true.
    * @post. true is returned iff 'this' is a max state.
    */
-  boolean isMax();
+    boolean isMax();
    
    
 
@@ -31,10 +30,10 @@ public interface StateAdversary extends State {
    * @pre. this!=null.
    * @post. true is returned iff this is an end state.  
    */
-  boolean end();
+    boolean end();
 
   /** 
-   * Computes the value of this  state. If the state is a leaf
+   * Computes the value of this state. If the state is a leaf
    * (end state), then this value is an exact value, and indicates
    * the outcome of the game. If the state is not an end state, then
    * this value is an approximate value. Its estimation plays a
@@ -44,7 +43,7 @@ public interface StateAdversary extends State {
    * @pre. this!=null.
    * @post. an integer value, representing the value of the state.   
    */
-  int value();
+    int value();
 
 
 
@@ -56,8 +55,8 @@ public interface StateAdversary extends State {
    * @post. true is returned iff 'this' is equal, as a state, 
      to 'other'.
    */
-  @Override
-  boolean equals(Object other);
+    @Override
+    boolean equals(Object other);
 
   /** 
    * Returns a representation as a string of the current state. 
@@ -65,8 +64,8 @@ public interface StateAdversary extends State {
    * @pre. true.
    * @post. A text representation of the current state is returned.
    */
-  @Override 
-  String toString();
+    @Override 
+    String toString();
 
   /** 
    * Returns an object representing the rule applied, leading to the
@@ -80,8 +79,5 @@ public interface StateAdversary extends State {
      then null is returned.
      TODO Replace Object by a more specific class or interface.
    */
-  Object ruleApplied();
-
-
-
+    Object ruleApplied();
 }

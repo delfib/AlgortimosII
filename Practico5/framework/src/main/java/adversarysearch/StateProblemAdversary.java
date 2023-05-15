@@ -9,7 +9,6 @@ import java.util.List;
  * problems should implement this interface, to be able to use 
  * the adversary search strategies.
  * @param <S> is the class characterising the state for the problem.
- * @author Nazareno Aguirre
  */
 public interface StateProblemAdversary<S extends StateAdversary> {
   /** 
@@ -21,7 +20,7 @@ public interface StateProblemAdversary<S extends StateAdversary> {
    * @pre. true.
    * @post. the initial state for the problem is returned.  
    */
-  S initialState();
+    S initialState();
   
   /** 
    * Returns the list of successor states for a given state, in the 
@@ -34,7 +33,7 @@ public interface StateProblemAdversary<S extends StateAdversary> {
    * @pre. state!=null.
    * @post. the list of successor states of state is returned.  
    */
-  List<S> getSuccessors(S s);
+    List<S> getSuccessors(S s);
 
   
   
@@ -49,7 +48,7 @@ public interface StateProblemAdversary<S extends StateAdversary> {
    * @post. an integer value, representing the least possible value
       for states, is returned. 
    */
-  int minValue();
+    int minValue();
 
   /** 
    * Indicates the greatest possible value for a state in the problem.
@@ -62,6 +61,6 @@ public interface StateProblemAdversary<S extends StateAdversary> {
    * @post. an integer value, representing the greatest possible value
      for states, is returned. 
    */
-  public int maxValue();
+    public int maxValue();
 
 }

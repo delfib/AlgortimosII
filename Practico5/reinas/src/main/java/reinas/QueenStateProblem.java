@@ -1,6 +1,5 @@
 package reinas;
 
-import java.util.LinkedList;
 import java.util.List;
 
 import conventionalsearch.StateProblem;
