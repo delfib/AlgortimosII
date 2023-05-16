@@ -1,6 +1,7 @@
 package util.sequences;
 /**
  * Computeds minimum sum subsequence of Integer sequences
+ * TODO: NO ESTA TERMINADA, NO ANDA BIEN
  */
 
  public class MinimumSumSubsequence{
@@ -226,7 +227,7 @@ package util.sequences;
 		}
 
 		if (sumaParcialI <= sumaParcialJ && sumaParcialI <= sumaParcialIJ){
-			result.setFirst(sumaParcialI + array[middle]); // TODO
+			result.setFirst(sumaParcialI + array[middle]); 
 			result.setSecond(secondI);
 		}
 		if (sumaParcialJ <= sumaParcialI && sumaParcialJ <= sumaParcialIJ){
@@ -248,7 +249,7 @@ package util.sequences;
 
 		Tuple <Integer,Integer,Integer> sumMin = new Tuple<>(0,-1,-1);
 
-		// TODO el caso donde se retorna []?
+		//  el caso donde se retorna []?
 		/*if (sumaIzq + sumaDer > sumaIzq && sumaIzq + sumaDer > sumaDer){
 			sumMin.setFirst(sumaIzq + sumaDer); 
 			sumMin.setSecond(resultLeft.getSecond());

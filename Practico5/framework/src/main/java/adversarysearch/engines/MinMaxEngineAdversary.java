@@ -52,7 +52,7 @@ public class MinMaxEngineAdversary <P extends StateProblemAdversary<S>, S extend
 
     // TODO: controlar la depth
     private int minMax(S state, int depth){
-        if (state.end() && depth == 0) {  // the state is a leaf
+        if (state.end() || depth == 0) {  // the state is a leaf
             return computeValue(state);
         } else {
             int x = Integer.MAX_VALUE;
@@ -78,7 +78,7 @@ public class MinMaxEngineAdversary <P extends StateProblemAdversary<S>, S extend
 
     public S computeSuccessor(S state) {
         S bestSuccessor = null;
-        if (state.isMax()){
+        if (state.isMax()){ // state es MAX
             int bestValue = Integer.MIN_VALUE;
             List<S> succs = sp.getSuccessors(state);
             for (S successor : succs){
@@ -89,7 +89,7 @@ public class MinMaxEngineAdversary <P extends StateProblemAdversary<S>, S extend
                 }
             }
         }
-        else {
+        else {  // state es MIN
             int bestValue = Integer.MAX_VALUE;
             List<S> succs = sp.getSuccessors(state);
             for (S successor : succs){

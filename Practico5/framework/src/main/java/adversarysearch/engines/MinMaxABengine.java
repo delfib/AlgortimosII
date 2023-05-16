@@ -10,6 +10,12 @@ public class MinMaxABengine <P extends StateProblemAdversary<S>, S extends State
     private P sp;
     private int maxDepth;
 
+    // Constructor
+    public MinMaxABengine(P sp, int maxDepth){
+        this.sp = sp;
+        this.maxDepth = maxDepth;
+    }
+
     /**
      * {@inheritDoc}}
      */
@@ -44,7 +50,7 @@ public class MinMaxABengine <P extends StateProblemAdversary<S>, S extends State
     
     // TODO: controlar la depth
     private int minMaxAB(S state, int depth, int alfa, int beta){
-        if (state.end() && depth == 0){
+        if (state.end() || depth == 0){
             return computeValue(state);
         }
         List<S> succs = sp.getSuccessors(state);

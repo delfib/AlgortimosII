@@ -45,7 +45,6 @@ public interface StateAdversary extends State {
     int value();
 
 
-
   /** 
    * Checks whether 'this' is equal to another state. 
    * @param other is the state to compare 'this' to.
