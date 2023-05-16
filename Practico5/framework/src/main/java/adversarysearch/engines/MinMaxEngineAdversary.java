@@ -44,7 +44,6 @@ public class MinMaxEngineAdversary <P extends StateProblemAdversary<S>, S extend
 
     /**
      * {@inheritDoc}
-     * Este es el algoritmo MinMax
      */    
     public int computeValue(S state){
         return state.value();
@@ -55,8 +54,8 @@ public class MinMaxEngineAdversary <P extends StateProblemAdversary<S>, S extend
         if (state.end() || depth == 0) {  // the state is a leaf
             return computeValue(state);
         } else {
-            int x = Integer.MAX_VALUE;
-            int y = Integer.MIN_VALUE;
+            int x = Integer.MIN_VALUE;
+            int y = Integer.MAX_VALUE;
 
             List<S> succs = sp.getSuccessors(state);
             for (int i = 0; i < succs.size(); i++){
@@ -75,6 +74,7 @@ public class MinMaxEngineAdversary <P extends StateProblemAdversary<S>, S extend
             }
         }
     }
+    
 
     public S computeSuccessor(S state) {
         S bestSuccessor = null;

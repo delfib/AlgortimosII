@@ -113,12 +113,15 @@ public class TicTacToeState implements StateAdversary {
     @Override
     public int value() {
         // el estado es exitoso, puede ser final o no. Significa que ganamos
-        if (isSuccess()) return 1;
-        // el estado es final pero no exitoso, significa que perdio
-        if (end()) return -1;
-
-        // no termino ni tampoco es exitoso
-        return 0;
+        if (isSuccess()) {
+            return 1; 
+        } else if (end()) { // el estado es final pero no exitoso, significa que perdio
+            return -1; 
+        } else {
+            return 0; // Estado no terminado ni exitoso
+        }
+        
+        
     }
 
     @Override
