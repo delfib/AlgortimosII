@@ -63,7 +63,7 @@ public class TicTacToeState implements StateAdversary {
     }
 
     /**
-     * Metodo privado utilizado en end().
+     * Metodo utilizado en end().
      * @return true sii el adversario gano
      */
     public boolean adversaryIsSuccess() {
@@ -112,6 +112,50 @@ public class TicTacToeState implements StateAdversary {
 
     @Override
     public int value() {
+        int[][] lines = {
+            {0, 1, 2}, // Horizontal lines
+            {3, 4, 5},
+            {6, 7, 8},
+            {0, 3, 6}, // Vertical lines
+            {1, 4, 7},
+            {2, 5, 8},
+            {0, 4, 8}, // Diagonal lines
+            {2, 4, 6}
+        };
+    
+        int maxScore = 0;
+        int minScore = 0;
+    
+        for (int[] line : lines) {
+            int xCount = 0;
+            int oCount = 0;
+    
+            for (int i : line) {
+                int row = i / 3; // Obtener la fila correspondiente al índice
+                int col = i % 3; // Obtener la columna correspondiente al índice
+    
+                if (board[row][col] == 1) {
+                    xCount++;
+                } else if (board[row][col] == 2) {
+                    oCount++;
+                }
+            }
+    
+            if (xCount == 3) {
+                maxScore += 100; // Player X (MAX) has a winning line
+            } else if (oCount == 3) {
+                minScore -= 100; // Player O (MIN) has a winning line
+            } else {
+                // Assign smaller weights to incomplete lines
+                maxScore += xCount * 10;
+                minScore -= oCount * 10;
+            }
+        }
+    
+        return maxScore + minScore;
+    }
+    
+    /*public int value() {
         // el estado es exitoso, puede ser final o no. Significa que ganamos
         if (isSuccess()) {
             return 1; 
@@ -120,9 +164,7 @@ public class TicTacToeState implements StateAdversary {
         } else {
             return 0; // Estado no terminado ni exitoso
         }
-        
-        
-    }
+    }*/
 
     @Override
     public  boolean equals(Object other) {
@@ -143,7 +185,8 @@ public class TicTacToeState implements StateAdversary {
     @Override
 public String toString() {
     StringBuilder sb = new StringBuilder();
-
+    sb.append("Let's play!\n");
+    sb.append("\n");
     for (int row = 0; row < 3; row++) {
         for (int col = 0; col < 3; col++) {
             if (board[row][col] == 1) {

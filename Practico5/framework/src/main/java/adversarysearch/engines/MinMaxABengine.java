@@ -6,6 +6,10 @@ import adversarysearch.EngineAdversary;
 import adversarysearch.StateAdversary;
 import adversarysearch.StateProblemAdversary;
 
+/**
+* This Class implements the Min-Max search strategy (con poda alfa-beta) which can be used with any instance of StateProblem.
+* @author Delfina Buil
+*/
 public class MinMaxABengine <P extends StateProblemAdversary<S>, S extends StateAdversary> implements EngineAdversary<P,S> {
     private P sp;
     private int maxDepth;
@@ -50,16 +54,16 @@ public class MinMaxABengine <P extends StateProblemAdversary<S>, S extends State
     
     // TODO: controlar la depth
     private int minMaxAB(S state, int depth, int alfa, int beta){
-        if (state.end() || depth == 0){
+        if (state.end() || depth >= maxDepth){ 
             return computeValue(state);
         }
         List<S> succs = sp.getSuccessors(state);
         for (int i = 0; i < succs.size() && alfa < beta; i++){
             if (state.isMax()){
-                alfa = Math.max(alfa, minMaxAB(succs.get(i), depth - 1, alfa, beta));
+                alfa = Math.max(alfa, minMaxAB(succs.get(i), depth + 1, alfa, beta));
             }
             else {
-                beta = Math.min(beta, minMaxAB(succs.get(i), depth - 1, alfa, beta));
+                beta = Math.min(beta, minMaxAB(succs.get(i), depth + 1, alfa, beta));
             }
         }
         if (state.isMax()){
@@ -71,7 +75,11 @@ public class MinMaxABengine <P extends StateProblemAdversary<S>, S extends State
     }
 
     public S computeSuccessor(S state) {
-        S bestSuccessor = null;
+        if (state.end()) {
+            return state;
+        }
+        S bestSuccessor = null; 
+
         if (state.isMax()){
             int bestValue = Integer.MIN_VALUE;
             List<S> succs = sp.getSuccessors(state);
@@ -94,7 +102,15 @@ public class MinMaxABengine <P extends StateProblemAdversary<S>, S extends State
                 }
             }
         }
-
+        /*int bestValue = Integer.MIN_VALUE;
+        List<S> succs = sp.getSuccessors(state);
+        for (S successor : succs){
+            int value = minMaxAB(successor, 0, Integer.MIN_VALUE, Integer.MAX_VALUE);
+            if (value > bestValue){
+                bestValue = value;
+                bestSuccessor = successor;
+            }
+        }*/
         return bestSuccessor;
     }
 

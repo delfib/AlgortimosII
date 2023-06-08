@@ -36,7 +36,7 @@ public class TicTacToeApp {
                     currentState.setPlayer(true);   // es nuestro turno ahora
                 }
                 else { // jugamos nosotros
-                    TicTacToeState bestMove = engineMinMax.computeSuccessor(currentState);
+                    TicTacToeState bestMove = engineMinMaxAB.computeSuccessor(currentState);
                     currentState = bestMove;
                 }
             }
@@ -47,11 +47,11 @@ public class TicTacToeApp {
         if (currentState.isSuccess()){
             System.out.println("You lost :( "); 
         }
-        else if (currentState.end()) {
-            System.out.println("You won :) ");
+        else if (currentState.end() && currentState.adversaryIsSuccess()) {
+            System.out.println("You won :)");
         }
         else {
-            System.out.println("It's a tie! ");
+            System.out.println("It's a tie!");
         }
     }
 }

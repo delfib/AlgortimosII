@@ -8,6 +8,7 @@ import adversarysearch.StateProblemAdversary;
 
 /**
 * This Class implements the Min-Max algorithm which can be used with any instance of StateProblem.
+* @author Delfina Buil
 */
 public class MinMaxEngineAdversary <P extends StateProblemAdversary<S>, S extends StateAdversary> implements EngineAdversary <P,S> {
     private P sp; // Internal representation of the StateProblemAdversary.
@@ -77,30 +78,20 @@ public class MinMaxEngineAdversary <P extends StateProblemAdversary<S>, S extend
     
 
     public S computeSuccessor(S state) {
+        if (state.end()) {
+            return state;
+        }
         S bestSuccessor = null;
-        if (state.isMax()){ // state es MAX
-            int bestValue = Integer.MIN_VALUE;
-            List<S> succs = sp.getSuccessors(state);
-            for (S successor : succs){
-                int value = minMax(successor, maxDepth - 1);
-                if (value > bestValue){
-                    bestValue = value;
-                    bestSuccessor = successor;
-                }
+        int bestValue = Integer.MIN_VALUE;
+        List<S> succs = sp.getSuccessors(state);
+        for (S successor : succs){
+            int value = minMax(successor, maxDepth - 1);
+            if (value > bestValue){
+                bestValue = value;
+                bestSuccessor = successor;
             }
         }
-        else {  // state es MIN
-            int bestValue = Integer.MAX_VALUE;
-            List<S> succs = sp.getSuccessors(state);
-            for (S successor : succs){
-                int value = minMax(successor, maxDepth - 1);
-                if (value < bestValue){
-                    bestValue = value;
-                    bestSuccessor = successor;
-                }
-            }
-        }
-
+        
         return bestSuccessor;
     }
 
