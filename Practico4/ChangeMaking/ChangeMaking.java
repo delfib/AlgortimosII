@@ -9,7 +9,7 @@ public class ChangeMaking {
     
     public static void main(String[] args) {
         int[] coins = new int[] {10,5,1,25};    // coins values
-        int[] cantCoins = new int[] {5,1,6,3};  // coins quiantities of each value
+        int[] cantCoins = new int[] {5,1,6,3};  // coins quantities of each value
         int change = 63;
 
         int[] coinss = new int[] {5,1,7};    // coins values
@@ -20,16 +20,16 @@ public class ChangeMaking {
         System.out.println(changeMaking(changee, coinss, cantCoinss)); // [7,7,7,1,1,1,1]
     }
     
-    public static List<Integer> changeMaking(int change, int[] coins, int[] cantCoins){
-        selectionSort(coins, cantCoins);;
+    public static List<Integer> changeMaking(int change, int[] coins, int[] cantCoins) {
+        selectionSort(coins, cantCoins);
         List<Integer> result = new LinkedList<>();
         return changeMaking(change, coins, cantCoins, 0, result);
     }
 
-    private static List<Integer> changeMaking(int change, int[] coins, int[] cantCoins, int i, List<Integer> result){
+    private static List<Integer> changeMaking(int change, int[] coins, int[] cantCoins, int i, List<Integer> result) {
 
-        if (change == 0) return result;
         if (coins == null) throw new IllegalArgumentException("There's no coins");
+        if (change == 0) return result;
     
         if (cantCoins[i] > 0 && change - coins[i] >= 0){
             cantCoins[i] = cantCoins[i] - 1;    // we have one less coin
@@ -42,7 +42,7 @@ public class ChangeMaking {
         return result;
     }    
 
-    // Sorts given array in descending order
+    // Sorts given array in descending order using the SelectionSort algorithm
     public static void selectionSort(int[] array, int[] array2) {
     	if (array == null) throw new IllegalArgumentException("array is null, can't sort");
       	//last = indice del ultimo elemento de la parte no ordenada
@@ -54,7 +54,7 @@ public class ChangeMaking {
       	}
    	}
     
-	private static int indexOfLargest(int[] array, int n, int i){
+	private static int indexOfLargest(int[] array, int n, int i) {
 	    int largest = i;
 	  	while (i < n){
             if (array[i] > array[largest]){

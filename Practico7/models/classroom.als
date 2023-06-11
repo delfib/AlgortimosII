@@ -21,6 +21,7 @@ sig Teacher extends Person  {}
 /* Some persons are students. */
 sig Student extends Person  {}
 
+
 /* Every person is a student. */
 // Toda persona pertence a Student, es un Student
 pred inv1 {
@@ -44,6 +45,10 @@ pred inv3 {
 pred inv4 {
     no Person & Teacher
 	no Person & Student
+}
+
+pred inv4 {
+	all p in Person | p !in Teacher and p !in Student
 }
 
 /* There are some classes assigned to teachers. */

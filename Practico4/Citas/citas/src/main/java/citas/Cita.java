@@ -9,7 +9,7 @@ public class Cita {
     private String descripcion;
     private LocalDate fecha;
     private LocalTime horarioInit;
-    private LocalTime horarioFin;  // del tipo 1020 = 18:20
+    private LocalTime horarioFin;  // del tipo 1820 = 18:20
     private int prioridad;  // prioridad del 1 al 10
 
     // Constructor
@@ -21,28 +21,28 @@ public class Cita {
         this.prioridad = prioridad;
     }
 
-    // Getter para la fecha
+    // A Getter method for fecha
     public LocalDate getFecha(){
         return fecha;
     }
 
-    // Getter para el horario de inicio
+    // A Getter method for horarioInit
     public LocalTime getHorarioInit(){
         return horarioInit;
     }
 
-    // Getter para el horario de finalizacion
+    // A Getter method for horarioFin
     public LocalTime getHorarioFin(){
         return horarioFin;
     }
 
-    // Getter para la prioridad
+    // A Getter method for prioridad
     public int getPrioridad(){
         return prioridad;
     }
 
     /**
-     * Metodo toString para una cita
+     * ToString method for a date
      */
     @Override
     public String toString(){

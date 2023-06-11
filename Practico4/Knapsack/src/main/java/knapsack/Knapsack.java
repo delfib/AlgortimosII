@@ -34,8 +34,8 @@ public class Knapsack{
 
     
     private static List<Integer> knapsackGreedy(int[] values, int[] weights, int capacity, int i, List<Integer> result){
-        if (capacity == 0 || i == values.length) return result;
         if (values == null || weights == null || capacity < 0) throw new IllegalArgumentException("Arguments are not valid");
+        if (capacity == 0 || i == values.length) return result;
 
         // puedo agregar ese item a la mochila
         if (capacity - weights[i] >= 0){

@@ -52,7 +52,6 @@ public class MinMaxABengine <P extends StateProblemAdversary<S>, S extends State
         return state.value();
     }
     
-    // TODO: controlar la depth
     private int minMaxAB(S state, int depth, int alfa, int beta){
         if (state.end() || depth >= maxDepth){ 
             return computeValue(state);
@@ -84,7 +83,7 @@ public class MinMaxABengine <P extends StateProblemAdversary<S>, S extends State
             int bestValue = Integer.MIN_VALUE;
             List<S> succs = sp.getSuccessors(state);
             for (S successor : succs){
-                int value = minMaxAB(successor, maxDepth - 1, Integer.MIN_VALUE, Integer.MAX_VALUE);
+                int value = minMaxAB(successor, 0, Integer.MIN_VALUE, Integer.MAX_VALUE);
                 if (value > bestValue){
                     bestValue = value;
                     bestSuccessor = successor;
@@ -95,22 +94,13 @@ public class MinMaxABengine <P extends StateProblemAdversary<S>, S extends State
             int bestValue = Integer.MAX_VALUE;
             List<S> succs = sp.getSuccessors(state);
             for (S successor : succs){
-                int value = minMaxAB(successor, maxDepth - 1, Integer.MIN_VALUE, Integer.MAX_VALUE);
+                int value = minMaxAB(successor, 0, Integer.MIN_VALUE, Integer.MAX_VALUE);
                 if (value < bestValue){
                     bestValue = value;
                     bestSuccessor = successor;
                 }
             }
         }
-        /*int bestValue = Integer.MIN_VALUE;
-        List<S> succs = sp.getSuccessors(state);
-        for (S successor : succs){
-            int value = minMaxAB(successor, 0, Integer.MIN_VALUE, Integer.MAX_VALUE);
-            if (value > bestValue){
-                bestValue = value;
-                bestSuccessor = successor;
-            }
-        }*/
         return bestSuccessor;
     }
 
