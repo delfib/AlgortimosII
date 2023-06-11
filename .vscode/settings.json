@@ -1,4 +1,6 @@
 {
     "java.configuration.updateBuildConfiguration": "interactive",
-    "java.project.sourcePaths": []
+    "java.project.sourcePaths": [
+        "Practico4"
+    ]
 }
